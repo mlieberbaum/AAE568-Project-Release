@@ -1,0 +1,81 @@
+# Simulation Input File Template
+
+
+
+# Sim Mode
+simMode = 'FREE'
+
+
+# Data Output Rate (Hz)
+dataOutputRate = 50;
+
+
+# Aerodynamic and 6-DOF Model
+aerodynamicModel = 'HiFi'
+sixDofModel = 'HiFi'
+
+
+# Sensor Mode (TRUTH or ESTIMATOR)
+sensorMode = 'ESTIMATOR'
+
+
+# Autopilot Mode (STATE_FEEDBACK or MPC)
+lateralAutopilotMode = 'MPC'
+longitudinalAutopilotMode = 'MPC'
+speedbrakeAutopilotMode = 'MPC'
+
+
+# Flight Computer Phase of Flight
+fcPhase = 'TAEM'
+
+
+# Time parameters
+simtStart = 0
+simdt = 0.005
+simtEnd = 500
+
+
+# Runway parameters
+rwyCenter = [28.597010, -80.682670, 0.0]
+rwyHeading = 0
+
+
+# Atmosphere Parameters
+standardAtmosphereFile = 'StandardAtmosphere.mat'
+standardAtmosphereInterpStep = 200
+
+
+# Spaceplane input file
+spaceplaneInputPath = 'C:\Users\Mark\Documents\Purdue\Repositories\AAE568\Project\Flight Simulator\Inputs\Spaceplane Files\X-20\'
+spaceplaneInputFile = 'X-20.inp'
+
+
+# Trajectory input file
+trajectoryInputFile = 'C:\Users\Mark\Documents\Purdue\Repositories\AAE568\Project\Flight Simulator\Trajectories\referenceTrajectory.mat'
+
+
+# Flight computer file
+flightComputerFile = 'C:\Users\Mark\Documents\Purdue\Repositories\AAE568\Project\Flight Simulator\Inputs\Flight Computer Files\FlightComputer.inp';
+
+
+# INITIAL STATE
+
+# Body frame velocities
+state.u = 800
+state.v  = 0
+state.w = 0
+
+# Euler Angles
+state.psi = 1.7224
+state.theta = -0.1902
+state.phi = 0
+
+# Body frame rotation rates
+state.p = 0
+state.q = 0
+state.r = 0
+
+# Earth Position (NED Earth)
+state.xE = 4000
+state.yE = -73387
+state.zE = -27500

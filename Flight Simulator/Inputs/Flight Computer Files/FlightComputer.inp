@@ -1,0 +1,31 @@
+# Flight Computer input file
+
+
+
+# Navigation System
+gps.posMeasurementSigma = 2.5;
+gps.velMeasurementSigma = 0.1;
+accel.biasSigma = 0.001;
+gyro.biasSigma = 5.0e-7;
+
+KF.initAttitudeUncertainty = 0.05;
+KF.initVelocityUncertainty = 0.25;
+KF.initialPositionUncertainty = 5.0;
+KF.initialAccelBiasUncertainty = 0.001;
+KF.initialGyroBiasUncertainty = 5.0e-7;
+
+KF.Q11 = 1.0e-10;
+KF.Q22 = 3.84e-8;
+KF.Q33 = 0;
+KF.Q44 = 4.49e-8;
+KF.Q55 = 1e-17;
+KF.updatePeriod = 1;
+
+
+
+# Autopilot System
+autopilot.updateRate = 50;
+autopilot.maxCtrlSurfDeflectionDelta = 0.04;
+autopilot.pitchLimitDeg = 30.0;
+autopilot.rollLimitDeg = 65.0;
+autopilot.sideslipLimitDeg = 10.0;

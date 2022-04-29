@@ -1,0 +1,94 @@
+# Spaceplane Input File
+
+
+# Physical Properties
+mass = 4700
+IxxMultiplier = 1.38
+IyyMultiplier = 8.14
+IzzMultiplier = 9.20
+
+IxyMultiplier = 0
+IxzMultiplier = 0
+IyzMultiplier = 0
+
+
+# Lift Curve Tables
+mainWingLiftCurve = 'MainWingLiftVsAlpha.csv'
+mainWingMomentCurve = 'MainWingMomentVsAlpha.csv'
+tailLiftCurve = 'TailLiftVsBeta.csv'
+
+
+
+# Main Wing
+mainWing.S = 32.1;
+mainWing.c = 2.0;
+mainWing.e = 0.95;
+mainWing.AR = 3.0;
+mainWing.cD0 = 0.003;
+mainWing.M1 = 0.75;
+mainWing.M2 = 0.95;
+mainWing.M3 = 1.05;
+mainWing.cdWave = 0.010;
+
+
+# Tail
+tail.S = 6;
+tail.c = 1.0;
+tail.e = 0.9;
+tail.AR = 3.0;
+tail.momentArm = [-4.0; 0; 0];
+tail.cd0 = 0.0025;
+
+
+# Elevator properties
+elevator.S = 1.0;
+elevator.clFull = 1.5;
+elevator.momentArm = [-4.0; 0; 0];
+
+
+# Aileron Properties
+leftAileron.S = 0.25;
+rightAileron.S = 0.25;
+leftAileron.clFull = 1.5;
+rightAileron.clFull = 1.5;
+leftAileron.momentArm = [-4.0; -2.0; 0];
+rightAileron.momentArm = [-4.0; 2.0; 0];
+
+
+# Rudder Properties
+rudder.S = 1.0;
+rudder.clFull = 1.5;
+rudder.momentArm = [-4.0; 0; 0];
+
+
+# Pitch Trim Properties
+pitchTrim.S = 0.3;
+pitchTrim.clFull = 1.7;
+pitchTrim.momentArm = [-7.2; 0; 0];
+
+
+# Speedbrake Properties
+speedbrake.F = 5.0;
+speedbrake.momentArm = [-4.0; 0; 0];
+
+
+# Gear Properties
+gear.F = 0.8;
+gear.momentArm = [0; 0; 1.0];
+
+
+# Damping moments
+pitchDampingMomentFactor = 0.10;
+rollDampingMomentFactor = 0.05;
+yawDampingMomentFactor = 0.10;
+
+
+# Y cross section projection
+yCrossSection = 32.1;
+
+
+# State Feedback Controller Gains
+longitudinalGains.K = [-9.92621785851772 2.220424357071 5.56841451987238];
+longitudinalGains.H = -8.04937271798518;
+lateralGains.K = [4.05010433316863 3.64401845388804 -3.6740050877407 11.7820725499025];
+lateralGains.H = -8.14268728884693;

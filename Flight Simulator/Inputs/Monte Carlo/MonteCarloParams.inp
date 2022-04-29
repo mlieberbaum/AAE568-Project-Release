@@ -1,0 +1,52 @@
+# Monte Carlo Parameters File
+
+
+# Atmospheric Parameters
+densityMultiplierSigma = 0.05;
+temperatureShiftSigma = 5.0;
+
+
+# Wind Parameters
+windSpeedMultiplierSigma = 0.2;
+windDirectionSigma = 18;
+windGustSpeedMultiplierSigma = 0.1;
+averageGustRate = 6;
+gustRateMultiplierSigma = 1;
+averageGustLength = 3;
+gustLengthMultiplierSigma = 0.8;
+gustDirectionOffsetDegSigma = 5;
+
+
+# Sensor Parameters
+imuAccelBiasSigma = 0.001;                    # m/s^2
+imuAccelNoiseSigma = 0.0027737112;            # m/s^2
+imuGyroBiasSigma = 5.0e-8;                    # rad/s
+imuGyroNoiseSigma = 4.1138e-05;               # rad/s
+gpsPosNoiseSigma = 2.5;                       # m
+gpsVelNoiseSigma = 0.1;                       # m/s
+rdrAltNoiseSigma = 1.0;                       # m
+aoaSensorNoiseSigmaDeg = 0.01;                # deg
+betaSensorNoiseSigmaDeg = 0.01;               # deg
+
+
+# Initialization Errors
+initAttitudeErrorSigma = 0.025;               # Degrees
+initPosErrorSigma = 2.5;                      # m
+initVelErrorSigma = 0.25;                     # m
+
+
+# Mass and Inertia Uncertainties
+massErrorScaleFactorSigma = 0.1;              # []
+IxxErrorScaleFactorSigma = 0.1;               # []
+IyyErrorScaleFactorSigma = 0.1;               # []
+IzzErrorScaleFactorSigma = 0.1;               # []
+IxyErrorScaleFactorSigma = 0.1;               # [] Percent of average of Ixx and Iyy
+IxzErrorScaleFactorSigma = 0.1;               # [] Percent of average of Ixx and Izz
+IyzErrorScaleFactorSigma = 0.1;               # [] Percent of average of Iyy and Izz
+
+
+# Aerodynamic Uncertainties
+mainWingLiftCurveMultiplierSigma = 0.04;      # []
+mainWingMomentCurveMultiplierSigma = 0.04;    # []
+tailLiftCurveMultiplierSigma = 0.04;          # []
+tailMomentCurveMultiplierSigma = 0.04;        # []
